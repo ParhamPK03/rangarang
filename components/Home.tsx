@@ -3,7 +3,7 @@ import TopSection from "./TopSection";
 import MainSection from "./MainSection";
 import FooterSection from "./FooterSection";
 import MobileMainSection from "./MobileMainSection";
-
+import BlogSection from "./BlogSection";
 
 const Home = () => {
   return (
@@ -11,6 +11,7 @@ const Home = () => {
       <TopSection />
       <MainSection />
       <MobileMainSection />
+      <BlogSection />
       <FooterSection />
     </div>
   );

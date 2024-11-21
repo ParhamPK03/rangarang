@@ -14,9 +14,9 @@ const FooterSection = () => {
   };
 
   return (
-    <div className="w-[80%] mx-auto">
+    <div className="w-[75%] mx-auto">
       <div className="flex justify-between items-center my-4">
-        <h2 className="text-red-500 font-semibold flex items-center gap-1">
+        <h2 className="text-red-500 font-semibold flex items-center gap-1 text-lg md:text-xl">
           <span className="bg-gray-300 px-[3.5px] py-2 mt-2"></span> سوالات
           متداول
         </h2>
@@ -187,6 +187,12 @@ const FooterSection = () => {
           )}
         </div>
       </div>
+      <p className="flex justify-center items-center mx-auto pt-8 mb-5 text-center">
+        {" "}
+        <span className="text-red-600">"</span>ساخته شده توسط پرهام
+        پورخانی---Developed by Parham-Pourkhani{" "}
+        <span className="text-red-600">"</span>
+      </p>
     </div>
   );
 };

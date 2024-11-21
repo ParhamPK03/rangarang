@@ -1,13 +1,16 @@
 "use client";
+
 import React, { useRef } from "react";
 import { Button } from "./ui/button";
 import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import Image from "next/image";
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
-import { SliderImage } from "../assets/ProductDetails";
 import { MdKeyboardArrowLeft } from "react-icons/md";
+import { SliderImage } from "../assets/ProductDetails";
+import { SliderImageType } from "../types/types";
 
 const TopSection = () => {
+  // تغییر نوع به HTMLDivElement
   const carouselRef = useRef<HTMLDivElement | null>(null);
 
   const scrollLeft = () => {
@@ -24,7 +27,7 @@ const TopSection = () => {
 
   return (
     <div className="bg-gradient-to-b from-gray-200 via-white to-gray-300">
-      <div className="pt-6 flex justify-between sm:flex-row  flex-col gap-5 lg:gap-0 items-center">
+      <div className="pt-6 flex justify-between sm:flex-row flex-col gap-5 lg:gap-0 items-center">
         {/* Right Text */}
         <div className="flex flex-row sm:flex-col items-center text-center sm:w-1/5 w-full justify-between px-4">
           <h3 className="text-xl font-semibold leading-8">
@@ -62,7 +65,7 @@ const TopSection = () => {
               ref={carouselRef}
               className="flex overflow-x-scroll snap-x snap-mandatory gap-4 scrollbar-hide mx-auto"
             >
-              {SliderImage.map((item) => (
+              {SliderImage.map((item: SliderImageType) => (
                 <CarouselItem
                   key={item.id}
                   className="snap-start flex-none w-[200px] relative group"

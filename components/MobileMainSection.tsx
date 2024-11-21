@@ -25,14 +25,21 @@ const imageData: Record<string, string[][]> = {
     ["/images/22.jpg", "/images/p20.jpg"],
   ],
 };
+type MenuType =
+  | "محصولات تبلیغاتی"
+  | "محصولات فوری و 24 ساعته"
+  | "چاپ عکس"
+  | "تبلیغات و بازاریابی";
 
 const MobileMainSection = () => {
-  const [activeMenu, setActiveMenu] = useState<string>("محصولات تبلیغاتی");
+  const [activeMenu, setActiveMenu] = useState<MenuType>("محصولات تبلیغاتی");
+
   const menuRef = useRef<HTMLDivElement | null>(null);
 
-  const handleMenuClick = (menu: string) => {
-    setActiveMenu(menu);
-  };
+ const handleMenuClick = (menu: string) => {
+  setActiveMenu(menu as MenuType); 
+};
+
 
   const scrollLeft = () => {
     if (menuRef.current) {
@@ -48,9 +55,9 @@ const MobileMainSection = () => {
 
   return (
     <div className="mt-10 flex flex-col w-[94%] mx-auto md:hidden">
-      <h1 className="flex items-center gap-1 text-xl text-red-500 mb-5 font-semibold">
+      <h2 className="flex items-center gap-1 text-lg md:text-xl text-red-500 mb-5 font-semibold">
         <span className="bg-gray-300 px-[3.5px] py-2 mt-2"></span> سایر محصولات
-      </h1>
+      </h2>
       <div className="relative flex items-center">
         {/* دکمه اسکرول به چپ */}
         <button
