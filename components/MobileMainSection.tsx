@@ -36,10 +36,9 @@ const MobileMainSection = () => {
 
   const menuRef = useRef<HTMLDivElement | null>(null);
 
- const handleMenuClick = (menu: string) => {
-  setActiveMenu(menu as MenuType); 
-};
-
+  const handleMenuClick = (menu: string) => {
+    setActiveMenu(menu as MenuType);
+  };
 
   const scrollLeft = () => {
     if (menuRef.current) {
@@ -59,7 +58,7 @@ const MobileMainSection = () => {
         <span className="bg-gray-300 px-[3.5px] py-2 mt-2"></span> سایر محصولات
       </h2>
       <div className="relative flex items-center">
-        {/* دکمه اسکرول به چپ */}
+        {/* Right Scroll Button */}
         <button
           onClick={scrollLeft}
           className="absolute left-0 z-10 bg-white p-1 rounded-full shadow-md"
@@ -67,7 +66,6 @@ const MobileMainSection = () => {
           <MdKeyboardArrowLeft className="text-gray-600 w-5 h-5" />
         </button>
 
-        {/* منوی افقی */}
         <div
           ref={menuRef}
           className="flex items-center gap-5 overflow-x-auto scrollbar-hide px-8"
@@ -93,7 +91,7 @@ const MobileMainSection = () => {
           ))}
         </div>
 
-        {/* دکمه اسکرول به راست */}
+        {/* Left Scroll Button */}
         <button
           onClick={scrollRight}
           className="absolute right-0 z-10 bg-white p-1 rounded-full shadow-md"
@@ -102,7 +100,7 @@ const MobileMainSection = () => {
         </button>
       </div>
 
-      {/* بخش تصاویر */}
+      {/* Images */}
       <div className="grid gap-4 mt-4 items-center justify-center">
         {imageData[activeMenu].map((row, rowIndex) => (
           <div

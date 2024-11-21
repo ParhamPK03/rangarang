@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { FaLessThan } from "react-icons/fa6";
 
 const FooterSection = () => {
-  // تعیین نوع دقیق برای openItems
+ 
   const [openItems, setOpenItems] = useState<Record<string, boolean>>({});
 
   const handleToggle = (item: string) => {

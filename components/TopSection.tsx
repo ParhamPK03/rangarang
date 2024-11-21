@@ -10,7 +10,7 @@ import { SliderImage } from "../assets/ProductDetails";
 import { SliderImageType } from "../types/types";
 
 const TopSection = () => {
-  // تغییر نوع به HTMLDivElement
+ 
   const carouselRef = useRef<HTMLDivElement | null>(null);
 
   const scrollLeft = () => {
